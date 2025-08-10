@@ -35,3 +35,59 @@
 ```bash
 git clone https://github.com/tuusuario/KPIStream.git
 cd KPIStream
+ProyectoWeb-MultiBackend/
+│
+├── frontend/
+│   ├── index.html
+│   ├── assets/
+│   │   ├── css/
+│   │   │   └── styles.css
+│   │   ├── js/
+│   │   │   ├── app.js
+│   │   │   └── api.js
+│   │   └── img/
+│   ├── package.json
+│   ├── Dockerfile.frontend
+│   └── README.md
+│
+├── backend/
+│   ├── api-csharp/
+│   │   ├── Controllers/
+│   │   │   └── AuthController.cs
+│   │   ├── Models/
+│   │   │   └── User.cs
+│   │   ├── Services/
+│   │   │   └── AuthService.cs
+│   │   ├── Program.cs
+│   │   ├── api-csharp.csproj
+│   │   ├── Dockerfile.csharp
+│   │   └── README.md
+│   │
+│   ├── api-python/
+│   │   ├── app/
+│   │   │   ├── main.py
+│   │   │   ├── routes/
+│   │   │   │   └── data_routes.py
+│   │   │   ├── models/
+│   │   │   │   └── data_model.py
+│   │   │   └── services/
+│   │   │       └── data_service.py
+│   │   ├── requirements.txt
+│   │   ├── Dockerfile.python
+│   │   └── README.md
+│   │
+│   ├── api-nodejs/
+│   │   ├── src/
+│   │   │   ├── routes/
+│   │   │   │   └── userRoutes.js
+│   │   │   ├── controllers/
+│   │   │   │   └── userController.js
+│   │   │   ├── models/
+│   │   │   │   └── userModel.js
+│   │   │   └── app.js
+│   │   ├── package.json
+│   │   ├── Dockerfile.node
+│   │   └── README.md
+│
+├── docker-compose.yml
+└── README.md

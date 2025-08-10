@@ -1,0 +1,34 @@
+version: '3.9'
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      - api-csharp
+      - api-python
+      - api-nodejs
+
+  api-csharp:
+    build:
+      context: ./backend/api-csharp
+      dockerfile: Dockerfile.csharp
+    ports:
+      - "5000:80"
+
+  api-python:
+    build:
+      context: ./backend/api-python
+      dockerfile: Dockerfile.python
+    ports:
+      - "5001:5000"
+
+  api-nodejs:
+    build:
+      context: ./backend/api-nodejs
+      dockerfile: Dockerfile.node
+    ports:
+      - "3000:3000"
