@@ -143,3 +143,15 @@ Donations
 Donations are **greatly appreciated!**
 
 [![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif "AdminLTE Presentation")](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=629XCUSXBHCBC "Donate")
+-----------------
+mi_sitio_flask/
+│
+├── app.py                  # Archivo principal de la aplicación
+├── templates/              # Carpeta para plantillas HTML
+│   └── index.html          # Plantilla principal
+├── static/                # Carpeta para archivos estáticos (CSS, JS, imágenes)
+│   ├── css/
+│   │   └── style.css
+│   └── js/
+│       └── script.js
+└── requirements.txt        # Dependencias del proyecto
