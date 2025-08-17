@@ -35,59 +35,59 @@
 ```bash
 git clone https://github.com/tuusuario/KPIStream.git
 cd KPIStream
+
 ProyectoWeb-MultiBackend/
 │
-├── frontend/
-│   ├── index.html
-│   ├── assets/
+├── frontend/                        # Aplicación cliente (HTML, CSS, JS)
+│   ├── index.html                    # Página principal
+│   ├── assets/                       # Recursos estáticos
 │   │   ├── css/
 │   │   │   └── styles.css
 │   │   ├── js/
-│   │   │   ├── app.js
-│   │   │   └── api.js
+│   │   │   ├── app.js                # Lógica principal del cliente
+│   │   │   └── api.js                # Funciones para consumir APIs
 │   │   └── img/
-│   ├── package.json
+│   └── package.json                  # Opcional, si usas npm para librerías front
+│
+├── backend/                          # Carpeta que agrupa los microservicios
+│   │
+│   ├── api-csharp/                   # Microservicio en C#
+│   │   ├── src/
+│   │   │   ├── Controllers/          # Controladores de endpoints
+│   │   │   ├── Models/               # Clases de datos
+│   │   │   ├── Services/             # Lógica de negocio
+│   │   │   └── Program.cs
+│   │   ├── api-csharp.csproj
+│   │   └── README.md
+│   │
+│   ├── api-python/                   # Microservicio en Python (Flask o FastAPI)
+│   │   ├── app/
+│   │   │   ├── main.py                # Entrada principal
+│   │   │   ├── routes/               # Endpoints
+│   │   │   ├── models/               # Definición de datos
+│   │   │   └── services/             # Lógica de negocio
+│   │   ├── requirements.txt
+│   │   └── README.md
+│   │
+│   ├── api-nodejs/                   # Microservicio en Node.js (Express)
+│   │   ├── src/
+│   │   │   ├── routes/               # Endpoints
+│   │   │   ├── controllers/          # Lógica de endpoints
+│   │   │   ├── models/               # Esquemas de datos (si usa MongoDB, etc.)
+│   │   │   └── app.js                 # Entrada principal
+│   │   ├── package.json
+│   │   └── README.md
+│
+├── docker/                           # Archivos Docker para despliegue
 │   ├── Dockerfile.frontend
+│   ├── Dockerfile.csharp
+│   ├── Dockerfile.python
+│   ├── Dockerfile.node
+│   └── docker-compose.yml            # Orquestación de todos los servicios
+│
+├── docs/                             # Documentación del proyecto
+│   ├── arquitectura.md
+│   ├── api-docs.md
 │   └── README.md
 │
-├── backend/
-│   ├── api-csharp/
-│   │   ├── Controllers/
-│   │   │   └── AuthController.cs
-│   │   ├── Models/
-│   │   │   └── User.cs
-│   │   ├── Services/
-│   │   │   └── AuthService.cs
-│   │   ├── Program.cs
-│   │   ├── api-csharp.csproj
-│   │   ├── Dockerfile.csharp
-│   │   └── README.md
-│   │
-│   ├── api-python/
-│   │   ├── app/
-│   │   │   ├── main.py
-│   │   │   ├── routes/
-│   │   │   │   └── data_routes.py
-│   │   │   ├── models/
-│   │   │   │   └── data_model.py
-│   │   │   └── services/
-│   │   │       └── data_service.py
-│   │   ├── requirements.txt
-│   │   ├── Dockerfile.python
-│   │   └── README.md
-│   │
-│   ├── api-nodejs/
-│   │   ├── src/
-│   │   │   ├── routes/
-│   │   │   │   └── userRoutes.js
-│   │   │   ├── controllers/
-│   │   │   │   └── userController.js
-│   │   │   ├── models/
-│   │   │   │   └── userModel.js
-│   │   │   └── app.js
-│   │   ├── package.json
-│   │   ├── Dockerfile.node
-│   │   └── README.md
-│
-├── docker-compose.yml
-└── README.md
+└── README.md                         # Descripción general
